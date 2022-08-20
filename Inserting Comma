@@ -1,0 +1,45 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Aug 19 12:27:43 2022
+
+@author: Admin18
+"""
+
+import pandas as pd
+source = pd.read_excel(r"C:\Users\Admin18\OneDrive - TerraPact, Inc\Desktop\Projects\Practice_1.xlsx",dtype=str
+                       )
+
+number_comma=[]
+source['Position']=source['Position'].astype(int)
+
+for index,row in source.iterrows():
+    nums=row['Position']
+    value=row['Number']
+    
+    for i in range(len(value)):
+        print(i)
+        print(nums)
+        if(i==nums):
+            #print("gh")
+            
+            #print(nums)
+            #print(i)
+            
+            number_comma.append(row['Number'][:i]+','+row['Number'][i:])
+            break
+            
+
+df = pd.DataFrame({"idx":number_comma
+                   
+                   })
+
+file = "C:/Users/Admin18/OneDrive - TerraPact, Inc/Desktop/Practice.xlsx"
+writer = pd.ExcelWriter(file)
+df.to_excel(writer, 'Sheet1', index = False)
+writer.save() 
+writer.close()
+            
+        
+    
+    
+    
