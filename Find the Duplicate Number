@@ -10,3 +10,4 @@ class Solution:
         
 
 Time Complexity: O(n), passing all the testcases
+Space Complexity: O(n) as we have created dictinary which is taken as an additional Data Structure.
