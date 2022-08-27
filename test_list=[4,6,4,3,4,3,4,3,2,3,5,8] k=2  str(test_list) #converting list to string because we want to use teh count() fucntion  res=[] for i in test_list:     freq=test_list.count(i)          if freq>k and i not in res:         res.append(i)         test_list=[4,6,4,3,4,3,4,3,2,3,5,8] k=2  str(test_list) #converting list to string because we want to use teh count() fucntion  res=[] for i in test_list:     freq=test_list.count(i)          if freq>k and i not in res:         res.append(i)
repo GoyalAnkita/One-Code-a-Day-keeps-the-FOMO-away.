@@ -1,0 +1,12 @@
+test_list=[4,6,4,3,4,3,4,3,2,3,5,8]
+k=2
+
+str(test_list) #converting list to string because we want to use teh count() fucntion
+
+res=[]
+for i in test_list:
+    freq=test_list.count(i)
+    
+    if freq>k and i not in res:
+        res.append(i)
+        
