@@ -1,12 +1,7 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Aug 19 12:27:43 2022
 
-@author: Admin18
-"""
 
 import pandas as pd
-source = pd.read_excel(r"C:\Users\Admin18\OneDrive - TerraPact, Inc\Desktop\Projects\Practice_1.xlsx",dtype=str
+source = pd.read_excel(url
                        )
 
 number_comma=[]
@@ -29,7 +24,7 @@ df = pd.DataFrame({"idx":number_comma
                    
                    })
 
-file = "C:/Users/Admin18/OneDrive - TerraPact, Inc/Desktop/Practice.xlsx"
+file = "C:/"
 writer = pd.ExcelWriter(file)
 df.to_excel(writer, 'Sheet1', index = False)
 writer.save() 
